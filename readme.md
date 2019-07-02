@@ -35,6 +35,13 @@ Calculate the sum of all the elements of the above mentioned second-longest sequ
 
 # Solution
 
-It's too hard to optimize haskell so I grabbed rust.
+It's too hard to optimize haskell so I grabbed rust which worked relatively easily.
 
- 
+The solution I got (untested)
+length: 613
+sum: 2051618299 
+
+
+# Testing
+
+To ensure the rust program works correctly we can use the Haskell solution.
