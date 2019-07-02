@@ -33,4 +33,8 @@ Calculate the sum of all the elements of the above mentioned second-longest sequ
 
  
 
+# Solution
+
+It's too hard to optimize haskell so I grabbed rust.
+
  
