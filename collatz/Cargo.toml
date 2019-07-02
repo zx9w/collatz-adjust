@@ -1,0 +1,7 @@
+[package]
+name = "collatz"
+version = "0.1.0"
+authors = ["zx9w <ilmu@rishi.is>"]
+edition = "2018"
+
+[dependencies]
