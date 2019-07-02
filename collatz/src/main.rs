@@ -1,11 +1,11 @@
 fn main() {
     let theseq = find_second_longest(gen_seqs(10000000));
-    let thesum: u32 = theseq.iter().sum();
+    let thesum: u64 = theseq.iter().sum();
     println!("{:#?}", theseq.len());
     println!("{:#?}", thesum);
 }
 
-fn collatz(n: u32) -> Vec<u32> {
+fn collatz(n: u64) -> Vec<u64> {
     let mut x = n;
     let mut rtn = vec![n];
     while x != 1 {
@@ -19,7 +19,7 @@ fn collatz(n: u32) -> Vec<u32> {
     return rtn
 }
 
-fn gen_seqs(n: u32) -> Vec<Vec<u32>> {
+fn gen_seqs(n: u64) -> Vec<Vec<u64>> {
     let mut rtn = vec![vec![1]];
     for x in 2..n {
         rtn.push(collatz(x));
@@ -28,7 +28,7 @@ fn gen_seqs(n: u32) -> Vec<Vec<u32>> {
 }
 
 
-fn find_second_longest(seqs: Vec<Vec<u32>>) -> Vec<u32> {
+fn find_second_longest(seqs: Vec<Vec<u64>>) -> Vec<u64> {
     let mut longest = vec![];
     let mut second = vec![];
 

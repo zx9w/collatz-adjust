@@ -41,7 +41,13 @@ The solution I got (untested)
 length: 613
 sum: 2051618299 
 
+Which was wrong, bumped the int size to u64 to get the correct solution:
+
+length: 668
+sum: 662065666072
 
 # Testing
 
 To ensure the rust program works correctly we can use the Haskell solution.
+
+After doing this for 1.000.000 and getting the wrong answer in the Rust solution but the right one for 100.000 I realized that the problem was the u32 was too small.

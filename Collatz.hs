@@ -15,12 +15,13 @@ collSeq y = go y [] -- No space leak since tail recursive
     go x !xs = go (collatz x) (x:xs)
 
 secondSeq :: Int -> [Int]
-secondSeq z = head $ tail $ sortBy (\x y->(comparing Down) (length x) (length y)) (collSeq <$> [1..z])
+secondSeq z = head $ tail $ reverse $ sortOn length $ (collSeq <$> [1..z])
 
 tenmillion = 10000000 :: Int -- avoid typo
 million    = 1000000 :: Int
+hundredk   = 100000 :: Int
 
 main :: IO()
 main = do
-  print (length $ secondSeq million)
-  print (sum $ secondSeq million)
+  print (length $ secondSeq hundredk)
+  print (sum $ secondSeq hundredk)
