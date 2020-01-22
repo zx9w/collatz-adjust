@@ -15,7 +15,7 @@ collSeq y = go y [] -- No space leak since tail recursive
     go x !xs = go (collatz x) (x:xs)
 
 secondSeq :: Int -> [Int]
-secondSeq z = head $ tail $ sortOn ((-) .length) $ (collSeq <$> [1..z])
+secondSeq z = head $ tail $ sortOn ((0-) .length) $ (collSeq <$> [1..z])
 
 tenmillion = 10000000 :: Int -- avoid typo
 million    = 1000000 :: Int
